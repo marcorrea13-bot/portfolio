@@ -71,6 +71,10 @@ h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
 .mosaic{margin:0}
 .mosaic img,.plate img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .plate{position:relative}
+.plate .media{overflow:hidden}
+.plate .media img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.plate:hover .media img{transform:scale(1.1)}
+@media (prefers-reduced-motion:reduce){.plate:hover .media img{transform:none}}
 .cap{background:var(--cobalt);color:var(--on-cobalt)}
 .cap .wrap{padding-block:18px 22px;display:flex;flex-direction:column;gap:2px}
 .cap h3{font-size:clamp(18px,1.8vw,22px);font-weight:600;line-height:1.2}
@@ -148,14 +152,14 @@ footer .wrap{padding-block:20px;display:flex;flex-wrap:wrap;justify-content:spac
   </figure>
 
   <section id="trabalhos" aria-label="Trabalhos">
-    <article class="plate"><img src="img/eucatex-origens.jpg" alt="Kit da linha Origens da Eucatex" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Eucatex</h3><span>Linha Origens</span></div></div></article>
-    <article class="plate"><img src="img/bonolat.jpg" alt="Família de embalagens Bonolat" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Bonolat</h3><span>Sistema de embalagens</span></div></div></article>
-    <article class="plate"><img src="img/authomix.jpg" alt="Campanha Original é AuthoMix" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Authomix</h3><span>Campanha Original é AuthoMix</span></div></div></article>
-    <article class="plate"><img src="img/eucatex-embalagens.jpg" alt="Embalagens premium Eucatex com grafismo metalizado" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Eucatex</h3><span>Embalagens premium</span></div></div></article>
-    <article class="plate"><img src="img/eucadoor.jpg" alt="Catálogo Eucadoor, portas Eucatex" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Eucadoor</h3><span>Catálogo</span></div></div></article>
-    <article class="plate"><img src="img/interpag.jpg" alt="Lançamento Inter Pag: folheteria, vitrine e uniforme" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Inter Pag</h3><span>Lançamento de marca</span></div></div></article>
-    <article class="plate"><img src="img/greenplac.jpg" alt="Kit de mostruário Green Plac" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Green Plac</h3><span>Kit de mostruário</span></div></div></article>
-    <article class="plate"><img src="img/pronto.jpg" alt="Embalagem e flyers da maquininha Pronto!" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Pronto!</h3><span>Embalagem e materiais de venda</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/eucatex-origens.jpg" alt="Kit da linha Origens da Eucatex" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Eucatex</h3><span>Linha Origens</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/bonolat.jpg" alt="Família de embalagens Bonolat" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Bonolat</h3><span>Sistema de embalagens</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/authomix.jpg" alt="Campanha Original é AuthoMix" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Authomix</h3><span>Campanha Original é AuthoMix</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/eucatex-embalagens.jpg" alt="Embalagens premium Eucatex com grafismo metalizado" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Eucatex</h3><span>Embalagens premium</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/eucadoor.jpg" alt="Catálogo Eucadoor, portas Eucatex" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Eucadoor</h3><span>Catálogo</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/interpag.jpg" alt="Lançamento Inter Pag: folheteria, vitrine e uniforme" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Inter Pag</h3><span>Lançamento de marca</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/greenplac.jpg" alt="Kit de mostruário Green Plac" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Green Plac</h3><span>Kit de mostruário</span></div></div></article>
+    <article class="plate"><div class="media"><img src="img/pronto.jpg" alt="Embalagem e flyers da maquininha Pronto!" width="2000" height="1125" loading="lazy"></div><div class="cap"><div class="wrap"><h3>Pronto!</h3><span>Embalagem e materiais de venda</span></div></div></article>
   </section>
 
   <section class="block about" id="sobre">
