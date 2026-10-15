@@ -119,6 +119,10 @@ section.block .wrap{padding-block:clamp(64px,9vw,112px)}
 footer{background:var(--cobalt-deep);color:var(--on-cobalt-soft);font-size:13px}
 footer .wrap{padding-block:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
 
+.to-top{position:fixed;right:calc(20px + env(safe-area-inset-right, 0px));bottom:calc(20px + env(safe-area-inset-bottom, 0px));z-index:50;width:52px;height:52px;border-radius:50%;border:0;background:var(--sun);color:#14181F;display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 24px -8px rgba(4,20,48,.5);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .25s ease, transform .25s ease}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{transform:translateY(-3px)}
+.to-top svg{width:22px;height:22px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
@@ -214,7 +218,15 @@ footer .wrap{padding-block:20px;display:flex;flex-wrap:wrap;justify-content:spac
 </section>
 <footer><div class="wrap"><span>Marcio Corrêa · Estratégia + Criatividade</span><span>São José | SC</span></div></footer>
 
+<button class="to-top" id="to-top" type="button" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></button>
 <script>
+var topBtn=document.getElementById('to-top');
+var onScroll=function(){ topBtn.classList.toggle('show', window.scrollY > 600); };
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+topBtn.addEventListener('click', function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+});
 document.querySelectorAll('.copy').forEach(function(btn){
   btn.addEventListener('click', function(){
     var text = btn.getAttribute('data-copy');
