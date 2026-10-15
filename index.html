@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Marcio Corrêa">
+<meta property="og:description" content="Estratégia + Criatividade. Marketing, marca e direção de criação.">
+<meta property="og:image" content="img/clientes.jpg">
+<title>Marcio Corrêa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Marcio Corrêa: estratégia e criatividade. Marketing, marca e direção de criação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: cobalt brand bands (hero, contact) bracket a light gallery of full-width project plates; one 1200px column. */
+:root{
+  --cobalt:#0F4FA0;          /* brand band, same in both themes */
+  --cobalt-deep:#0A3B7A;
+  --sun:#F6C46A;             /* brand yellow, used on cobalt */
+  --on-cobalt:#F3F6FB;
+  --on-cobalt-soft:#C9D6EA;
+  --bg:#F7F8FA;
+  --surface:#FFFFFF;
+  --fg:#14181F;
+  --muted:#4F5867;
+  --line:#DCE1E8;
+  --accent:#0F4FA0;          /* links and labels on light ground */
+  --display:'Lexend','Avenir Next','Segoe UI',sans-serif;
+  --body:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;
+  --max:1200px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1218; --surface:#161B24; --fg:#ECEFF4; --muted:#A3ACBA; --line:#2A313D; --accent:#8DB6F2;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1218; --surface:#161B24; --fg:#ECEFF4; --muted:#A3ACBA; --line:#2A313D; --accent:#8DB6F2;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px))}
+@media (max-width:520px){.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}}
+
+.eyebrow{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+
+/* Hero */
+.hero{background:var(--cobalt);color:var(--on-cobalt)}
+.hero .wrap{padding-block:clamp(40px,6vw,72px) clamp(36px,5vw,56px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:28px 48px}
+.hero-id{min-width:0;max-width:36em}
+.hero h1{font-size:clamp(34px,4.6vw,56px);font-weight:600;line-height:1.02;letter-spacing:-.02em;color:var(--sun)}
+.hero .tag{font-family:var(--display);font-size:clamp(17px,1.7vw,20px);font-weight:500;margin-top:12px}
+.hero .tag b{color:var(--sun);font-weight:500}
+.hero p.lead{margin:20px 0 0;font-size:16px;color:var(--on-cobalt-soft)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;font-family:var(--display);font-weight:500;font-size:15px;text-decoration:none;transition:transform .2s ease, background .2s ease}
+.btn-sun{background:var(--sun);color:#14181F}
+.btn-sun:hover{transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(243,246,251,.45);color:var(--on-cobalt)}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+/* Full-bleed images */
+.mosaic{margin:0}
+.mosaic img,.plate img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.plate{position:relative}
+.cap{background:var(--cobalt);color:var(--on-cobalt)}
+.cap .wrap{padding-block:18px 22px;display:flex;flex-direction:column;gap:2px}
+.cap h3{font-size:clamp(18px,1.8vw,22px);font-weight:600;line-height:1.2}
+.cap span{font-size:16px;color:var(--on-cobalt-soft)}
+
+section.block .wrap{padding-block:clamp(64px,9vw,112px)}
+
+/* About */
+.about{background:var(--surface);border-block:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,96px)}
+@media (max-width:860px){.about-grid{grid-template-columns:minmax(0,1fr)}}
+.about-text p{margin:0 0 18px;max-width:36em}
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}
+@media (max-width:640px){.skills{grid-template-columns:minmax(0,1fr)}}
+.skills h3{font-size:15px;font-weight:600;padding-bottom:8px;border-bottom:2px solid var(--accent);margin-bottom:10px}
+.skills ul{list-style:none;margin:0;padding:0;font-size:15px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.skills li.hl{color:var(--fg);font-weight:600}
+
+.timeline{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.timeline li{position:relative;padding:0 0 26px 26px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+.timeline li:first-child::before{background:var(--accent)}
+.timeline .when{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--muted);font-variant-numeric:tabular-nums}
+.timeline .org{font-family:var(--display);font-size:19px;font-weight:600;line-height:1.3}
+.timeline .role{font-size:15px;color:var(--muted)}
+.edu{margin-top:36px;padding-top:24px;border-top:1px solid var(--line);font-size:15px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+.edu strong{color:var(--fg);font-weight:600}
+
+/* Contact */
+.contact{background:var(--cobalt);color:var(--on-cobalt)}
+.contact .wrap{padding-block:clamp(64px,9vw,104px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end}
+@media (max-width:860px){.contact .wrap{grid-template-columns:minmax(0,1fr)}}
+.contact h2{font-size:clamp(36px,5.4vw,68px);font-weight:600;letter-spacing:-.025em;line-height:1;color:var(--sun)}
+.contact p{color:var(--on-cobalt-soft);margin:18px 0 0;max-width:30em}
+.cards{display:flex;flex-direction:column;gap:2px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid rgba(243,246,251,.2)}
+.row:first-child{border-top:1px solid rgba(243,246,251,.2)}
+.row .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--on-cobalt-soft);font-weight:600}
+.row .v{font-family:var(--display);font-size:18px;color:var(--on-cobalt);word-break:break-word;user-select:all}
+.row .v a{color:var(--on-cobalt);text-decoration:none;border-bottom:1px solid rgba(246,196,106,.6)}
+.row > div{min-width:0}
+.copy{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid rgba(243,246,251,.4);background:transparent;color:var(--on-cobalt);font:500 14px var(--display);cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.08)}
+.copy.done{background:var(--sun);color:#14181F;border-color:var(--sun)}
+footer{background:var(--cobalt-deep);color:var(--on-cobalt-soft);font-size:13px}
+footer .wrap{padding-block:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-id">
+      <h1>Marcio Corrêa</h1>
+      <div class="tag">Estratégia <b>+</b> Criatividade</div>
+      <p class="lead">Líder de marketing e Diretor de Criação, com mais de 25 anos transformando objetivos de negócio em marcas, campanhas e produtos que vendem.</p>
+    </div>
+    <div class="ctas">
+      <a class="btn btn-sun" href="#trabalhos">Ver trabalhos</a>
+      <a class="btn btn-ghost" href="#contato">Falar comigo</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <figure class="mosaic">
+    <img src="img/clientes.jpg" alt="Mosaico de marcas e peças: Eucatex, Pronto!, Colgate, Authomix, Interpag, Qualicorp e Dacarto" width="2000" height="1125">
+  </figure>
+
+  <section id="trabalhos" aria-label="Trabalhos">
+    <article class="plate"><img src="img/eucatex-origens.jpg" alt="Kit da linha Origens da Eucatex" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Eucatex</h3><span>Linha Origens</span></div></div></article>
+    <article class="plate"><img src="img/bonolat.jpg" alt="Família de embalagens Bonolat" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Bonolat</h3><span>Sistema de embalagens</span></div></div></article>
+    <article class="plate"><img src="img/authomix.jpg" alt="Campanha Original é AuthoMix" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Authomix</h3><span>Campanha Original é AuthoMix</span></div></div></article>
+    <article class="plate"><img src="img/eucatex-embalagens.jpg" alt="Embalagens premium Eucatex com grafismo metalizado" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Eucatex</h3><span>Embalagens premium</span></div></div></article>
+    <article class="plate"><img src="img/eucadoor.jpg" alt="Catálogo Eucadoor, portas Eucatex" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Eucadoor</h3><span>Catálogo</span></div></div></article>
+    <article class="plate"><img src="img/interpag.jpg" alt="Lançamento Inter Pag: folheteria, vitrine e uniforme" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Inter Pag</h3><span>Lançamento de marca</span></div></div></article>
+    <article class="plate"><img src="img/greenplac.jpg" alt="Kit de mostruário Green Plac" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Green Plac</h3><span>Kit de mostruário</span></div></div></article>
+    <article class="plate"><img src="img/pronto.jpg" alt="Embalagem e flyers da maquininha Pronto!" width="2000" height="1125" loading="lazy"><div class="cap"><div class="wrap"><h3>Pronto!</h3><span>Embalagem e materiais de venda</span></div></div></article>
+  </section>
+
+  <section class="block about" id="sobre">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="eyebrow">Sobre</span>
+          <h2 style="font-size:clamp(30px,3.8vw,44px);font-weight:600;letter-spacing:-.02em;line-height:1.08;margin:10px 0 24px">Dos dois lados da mesa.</h2>
+          <p>Atuei no marketing corporativo da Qualicorp e em agências como a MRM, do McCann Worldgroup. Desde 2014 dirijo a Nest Comunicação, que funciona como braço de marketing das empresas clientes.</p>
+          <p>Essa vivência me permite liderar times multidisciplinares, gerir fornecedores e orçamento e conectar o marketing às demais áreas da empresa. Experiência internacional em Dublin e inglês fluente.</p>
+          <div class="skills">
+            <div>
+              <h3>Estratégia e gestão</h3>
+              <ul><li>Planejamento de marketing</li><li>Liderança de times</li><li>Gestão de agências e fornecedores</li><li>Gestão de orçamento</li></ul>
+            </div>
+            <div>
+              <h3>Marca e comunicação</h3>
+              <ul><li>Branding e posicionamento</li><li>Direção de criação</li><li>Comunicação corporativa</li><li>Design editorial</li></ul>
+            </div>
+            <div>
+              <h3>Execução e canais</h3>
+              <ul><li class="hl">IA para criatividade e gestão</li><li>Campanhas integradas</li><li>Marketing direto e CRM</li><li>UX e UI</li></ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow">Trajetória</span>
+          <ol class="timeline" style="margin-top:22px">
+            <li><div class="when">2014 – hoje</div><div class="org">Nest Comunicação</div><div class="role">Sócio-fundador e Diretor de Criação</div></li>
+            <li><div class="when">2013 – 2014</div><div class="org">MRM · McCann Worldgroup</div><div class="role">Diretor de Arte</div></li>
+            <li><div class="when">2011 – 2013</div><div class="org">Qualicorp</div><div class="role">Marketing</div></li>
+            <li><div class="when">2009 – 2011</div><div class="org">Bbox Design</div><div class="role">Chefe de Arte</div></li>
+            <li><div class="when">2007 – 2008</div><div class="org">Blackthorn Print &amp; Design · Dublin</div><div class="role">Diretor de Arte</div></li>
+            <li><div class="when">2003 – 2006</div><div class="org">Editora FHOX</div><div class="role">Designer Gráfico</div></li>
+          </ol>
+          <div class="edu">
+            <div><strong>MBA em Marketing</strong> · FMU</div>
+            <div><strong>Pós em Design Gráfico</strong> · Belas Artes de São Paulo</div>
+            <div><strong>Publicidade e Propaganda</strong> · Universidade Santa Cecília</div>
+            <div><strong>Ferramentas</strong> · Adobe Creative Suite, Claude, ChatGPT, Gemini, RD Station</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contato">
+  <div class="wrap">
+    <div>
+      <h2>Vamos conversar?</h2>
+      <p>Disponível para posições de Gerente ou Head de Marketing. Baseado em São José, SC.</p>
+    </div>
+    <div class="cards">
+      <div class="row"><div><div class="k">E-mail</div><div class="v" id="v-email">marcio@thenest.com.br</div></div><button class="copy" type="button" id="copy-email" data-copy="marcio@thenest.com.br">Copiar</button></div>
+      <div class="row"><div><div class="k">Telefone</div><div class="v" id="v-tel">(11) 98475-6913</div></div><button class="copy" type="button" id="copy-tel" data-copy="+5511984756913">Copiar</button></div>
+      <div class="row"><div><div class="k">LinkedIn</div><div class="v"><a href="https://www.linkedin.com/in/marciocorrêa-810a26b2" target="_blank" rel="noopener">linkedin.com/in/marciocorrêa-810a26b2</a></div></div></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>Marcio Corrêa · Estratégia + Criatividade</span><span>São José | SC</span></div></footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var text = btn.getAttribute('data-copy');
+    var done = function(){ btn.textContent = 'Copiado'; btn.classList.add('done'); setTimeout(function(){ btn.textContent = 'Copiar'; btn.classList.remove('done'); }, 1800); };
+    var fallback = function(){
+      var v = btn.parentElement.querySelector('.v');
+      var r = document.createRange(); r.selectNodeContents(v);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      btn.textContent = 'Selecionado';
+      setTimeout(function(){ btn.textContent = 'Copiar'; }, 1800);
+    };
+    try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+  });
+});
+</script>
+</body>
+</html>
